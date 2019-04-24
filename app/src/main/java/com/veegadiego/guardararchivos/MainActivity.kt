@@ -39,10 +39,11 @@ class MainActivity : AppCompatActivity() {
 
     fun GrabarEx(v: View) {
         if (esExterno() && Permisos(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-            val text = File(Environment.getExternalStorageDirectory(), et_name.getText().toString())
+            val text = File(Environment.getExternalStorageDirectory(), et_name.text.toString())
             try {
                 val arc = FileOutputStream(text)
-                arc.write(et_text.getText().toString().toByteArray())
+                arc.write(et_text.text.toString().toByteArray())
+                arc.flush()
                 arc.close()
 
                 Toast.makeText(this, "Archivo guardado", Toast.LENGTH_LONG).show()
