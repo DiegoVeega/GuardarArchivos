@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GuardarArchivos</string>
+    <string name="nombre_de_archivo">Nombre de archivo:</string>
+    <string name="nombre">Nombre</string>
+    <string name="texto_del_archivo">Texto del archivo:</string>
+    <string name="texto">Texto</string>
+    <string name="guardar_externo">Guardar Externo</string>
+    <string name="guardar_interno">Guardar Interno</string>
+</resources>
