@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        et_name = findViewById(R.id.et_name)
+        et_name = this.findViewById(R.id.et_name)
         et_text = this.findViewById(R.id.et_text)
     }
 
@@ -39,9 +39,9 @@ class MainActivity : AppCompatActivity() {
 
     fun GrabarEx(v: View) {
         if (esExterno() && Permisos(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-            val texto = File(Environment.getExternalStorageDirectory(), et_name.getText().toString())
+            val text = File(Environment.getExternalStorageDirectory(), et_name.getText().toString())
             try {
-                val arc = FileOutputStream(texto)
+                val arc = FileOutputStream(text)
                 arc.write(et_text.getText().toString().toByteArray())
                 arc.close()
 
